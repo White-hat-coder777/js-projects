@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Voter ID Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom,cyan,lightgreen);
+            display: flex;
+            justify-content: center;
+	    flex-direction: column;  
+            align-items: center;
+            height: 100vh;
+        
+
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+       
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align:center;">     Voter ID Verification      </h1><br>
+
+    <button onclick="verify()">Verify Voter</button>
+
+    <script>
+        function verify() {
+            var name = prompt("Enter your full name:");
+            var age = prompt("Enter your age:");
+
+            if (name.length < 3) {
+                alert("Name must be at least 3 characters long.");
+            }
+            else if (age < 18) {
+                alert("You must be at least 18 years old to vote.");
+            }
+                    else {
+                alert("Voter ID Verified Successfully!");
+            }
+        }
+    </script>
+
+</body>
+</html>
